@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     console.log('Component Created or Updated');
     return () => {
-      console.log('Component Destroyed So it can be updated or re-created');
+      console.log('Component Destroyed So it can be Created or Updated');
     }
   });
   
