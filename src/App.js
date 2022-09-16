@@ -24,12 +24,8 @@ function App() {
   
 
   useEffect(() => {
-    if(loggedInUser !== null) {
       getMovieData('Batman');
-    } else {
-      setMovie(null)
-    }
-  }, [loggedInUser]);
+  }, []);
 
 
 
