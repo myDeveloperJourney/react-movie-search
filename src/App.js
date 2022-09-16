@@ -7,11 +7,13 @@ function App() {
 
   const [ movie, setMovie ] = useState(null);
   
-  const getMovieData = (title) => {
-    console.log('function was called')
-    fetch("https://www.omdbapi.com/?apikey=98e3fb1f&t=" + title)
-    .then(response => response.json())
-    .then(data => setMovie(data));
+  const getMovieData = async (title) => {
+    
+    const response = await fetch("https://www.omdbapi.com/?apikey=98e3fb1f&t=" + title);
+    
+    const data = await response.json();
+    
+    setMovie(data);
   };
 
 
